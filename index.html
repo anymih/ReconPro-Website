@@ -32,12 +32,15 @@
       <li><a href="#contact" class="mobile-drawer-link" onclick="toggleMobileMenu(false)">Contact Us <span>›</span></a></li>
     </ul>
 
-    <div style="margin-top:auto; padding-top:20px; border-top:1px solid var(--color-border-hairline);">
-      <a href="https://app.reconpro.io" target="_blank" rel="noopener" class="btn-secondary-outline" style="width:100%; justify-content:center; margin-bottom:10px;">
-        🔑 Portal Sign-In
-      </a>
+    <div style="margin-top:auto; padding-top:20px; border-top:1px solid var(--color-border-hairline); display:flex; flex-direction:column; gap:8px;">
       <a href="#heroLeadForm" class="btn-primary-violet" style="width:100%; text-align:center;" onclick="toggleMobileMenu(false)">
-        Start an Engagement
+        🏡 Plot Owner Consultation
+      </a>
+      <a href="https://wa.me/919971007906?text=Hi%20RECONPRO%20Team%2C%20I%20am%20a%20builder%2Fcontractor%20interested%20in%20collaborating." target="_blank" rel="noopener" class="btn-secondary-outline" style="width:100%; justify-content:center;">
+        🏗️ Builder Collaboration
+      </a>
+      <a href="https://wa.me/919971007906?text=Hi%20RECONPRO%20Team%2C%20I%20am%20interested%20in%20taking%20a%20franchise." target="_blank" rel="noopener" class="btn-secondary-outline" style="width:100%; justify-content:center;">
+        🤝 Franchise Opportunity
       </a>
     </div>
   </aside>
@@ -57,12 +60,41 @@
       </a>
 
       <div class="header-actions">
-        <a href="https://app.reconpro.io" target="_blank" rel="noopener" class="btn-secondary-outline">
-          🔑 Portal Sign-In
-        </a>
-        <a href="#heroLeadForm" class="btn-primary-violet">
-          Start an Engagement
-        </a>
+        <div class="header-cta-dropdown-wrapper">
+          <button class="cta-dropdown-trigger" aria-haspopup="true">
+            Schedule a Consultation Call ▾
+          </button>
+          
+          <div class="cta-dropdown-menu">
+            <!-- Option 1: Individual Plot Owner -->
+            <a href="#heroLeadForm" class="cta-dropdown-item" onclick="selectPersona('owner')">
+              <span class="cta-item-icon">🏡</span>
+              <div class="cta-item-text">
+                <span class="cta-item-title">Individual Plot Owner</span>
+                <span class="cta-item-desc">Plan, build, or evaluate your home construction, specs & contract</span>
+              </div>
+            </a>
+
+            <!-- Option 2: Builder / Contractor Partner -->
+            <a href="https://wa.me/919971007906?text=Hi%20RECONPRO%20Team%2C%20I%20am%20a%20builder%2Fcontractor%20looking%20to%20collaborate%20on%20projects%2C%20list%20ratings%20and%20use%20ReBOS." target="_blank" rel="noopener" class="cta-dropdown-item" onclick="selectPersona('builder')">
+              <span class="cta-item-icon">🏗️</span>
+              <div class="cta-item-text">
+                <span class="cta-item-title">Builder / Contractor Partner</span>
+                <span class="cta-item-desc">Collaborate on projects, list project ratings & stats on ReBOS</span>
+              </div>
+            </a>
+
+            <!-- Option 3: Franchise Opportunity -->
+            <a href="https://wa.me/919971007906?text=Hi%20RECONPRO%20Team%2C%20I%20am%20interested%20in%20taking%20a%20RECONPRO%20franchise%20in%20my%20city." target="_blank" rel="noopener" class="cta-dropdown-item" onclick="selectPersona('franchise')">
+              <span class="cta-item-icon">🤝</span>
+              <div class="cta-item-text">
+                <span class="cta-item-title">Franchise Partnership</span>
+                <span class="cta-item-desc">Expand RECONPRO advisory practice to your city</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
         <button class="mobile-menu-toggle" onclick="toggleMobileMenu(true)" aria-label="Open Navigation Menu">
           ☰
         </button>

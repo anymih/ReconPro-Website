@@ -1,7 +1,7 @@
 // RECONPRO — Main JavaScript Engine
 
 document.addEventListener('DOMContentLoaded', () => {
-  console.log('ReconPro Mobile & Desktop Engine Initialized.');
+  console.log('ReconPro Engine Initialized.');
   initNavScroll();
 });
 
@@ -13,11 +13,22 @@ function toggleMobileMenu(isOpen) {
   if (isOpen) {
     drawer.classList.add('open');
     overlay.classList.add('active');
-    document.body.style.overflow = 'hidden'; // Prevent background scrolling
+    document.body.style.overflow = 'hidden';
   } else {
     drawer.classList.remove('open');
     overlay.classList.remove('active');
     document.body.style.overflow = '';
+  }
+}
+
+// Persona Selection Handler for Header Dropdown
+function selectPersona(type) {
+  console.log('Selected Consultation Type:', type);
+  if (type === 'owner') {
+    const formCard = document.getElementById('heroLeadForm');
+    if (formCard) {
+      formCard.scrollIntoView({ behavior: 'smooth' });
+    }
   }
 }
 
@@ -110,6 +121,7 @@ function initNavScroll() {
 
 // Expose handlers globally
 window.toggleMobileMenu = toggleMobileMenu;
+window.selectPersona = selectPersona;
 window.handleFormSubmit = handleFormSubmit;
 window.switchRebosTab = switchRebosTab;
 window.openCalcModal = openCalcModal;
