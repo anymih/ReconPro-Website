@@ -1,9 +1,25 @@
 // RECONPRO — Main JavaScript Engine
 
 document.addEventListener('DOMContentLoaded', () => {
-  console.log('ReconPro Web Application Initialized.');
+  console.log('ReconPro Mobile & Desktop Engine Initialized.');
   initNavScroll();
 });
+
+// Mobile Off-Canvas Drawer Toggle Handler
+function toggleMobileMenu(isOpen) {
+  const drawer = document.getElementById('mobileDrawer');
+  const overlay = document.getElementById('drawerOverlay');
+
+  if (isOpen) {
+    drawer.classList.add('open');
+    overlay.classList.add('active');
+    document.body.style.overflow = 'hidden'; // Prevent background scrolling
+  } else {
+    drawer.classList.remove('open');
+    overlay.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+}
 
 // Form Submission Handler for Hero Lead Magnet
 function handleFormSubmit(e) {
@@ -40,7 +56,9 @@ function switchRebosTab(role) {
   const buttons = document.querySelectorAll('.rebos-tab-btn');
   buttons.forEach(btn => btn.classList.remove('active'));
   
-  event.target.classList.add('active');
+  if (event && event.target) {
+    event.target.classList.add('active');
+  }
 
   const titleEl = document.getElementById('rebosRoleTitle');
   const descEl = document.getElementById('rebosRoleDesc');
@@ -83,7 +101,7 @@ function openCalcModal() {
 function initNavScroll() {
   const navLinks = document.querySelectorAll('.nav-link');
   navLinks.forEach(link => {
-    link.addEventListener('click', (e) => {
+    link.addEventListener('click', () => {
       navLinks.forEach(l => l.classList.remove('active'));
       link.classList.add('active');
     });
@@ -91,6 +109,7 @@ function initNavScroll() {
 }
 
 // Expose handlers globally
+window.toggleMobileMenu = toggleMobileMenu;
 window.handleFormSubmit = handleFormSubmit;
 window.switchRebosTab = switchRebosTab;
 window.openCalcModal = openCalcModal;

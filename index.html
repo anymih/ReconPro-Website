@@ -2,15 +2,48 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
   <title>RECONPRO | Your Knowledge Partner in Home Construction</title>
   <meta name="description" content="100% independent techno-commercial advisory for plot owners in Delhi NCR. IIT & IIM alumni guided construction planning, agreement review, and ReBOS site management.">
   <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
 
+  <!-- Off-Canvas Backdrop Overlay -->
+  <div class="drawer-overlay" id="drawerOverlay" onclick="toggleMobileMenu(false)"></div>
+
+  <!-- Off-Canvas Mobile Drawer -->
+  <aside class="mobile-nav-drawer" id="mobileDrawer" aria-label="Mobile Navigation">
+    <div class="mobile-drawer-header">
+      <div class="brand-container">
+        <div class="logo-hexagon">⬡</div>
+        <span class="wordmark">RECONPRO</span>
+      </div>
+      <button class="drawer-close-btn" onclick="toggleMobileMenu(false)" aria-label="Close Menu">✕</button>
+    </div>
+
+    <ul class="mobile-drawer-links">
+      <li><a href="#services" class="mobile-drawer-link" onclick="toggleMobileMenu(false)">Advisory Services <span>›</span></a></li>
+      <li><a href="#process" class="mobile-drawer-link" onclick="toggleMobileMenu(false)">4-Step Process <span>›</span></a></li>
+      <li><a href="#rebos" class="mobile-drawer-link" onclick="toggleMobileMenu(false)">ReBOS Tech <span>›</span></a></li>
+      <li><a href="#tools" class="mobile-drawer-link" onclick="toggleMobileMenu(false)">Calculators & Maps <span>›</span></a></li>
+      <li><a href="#packages" class="mobile-drawer-link" onclick="toggleMobileMenu(false)">Package Specifications <span>›</span></a></li>
+      <li><a href="#about" class="mobile-drawer-link" onclick="toggleMobileMenu(false)">IIT/IIM Leadership <span>›</span></a></li>
+      <li><a href="#contact" class="mobile-drawer-link" onclick="toggleMobileMenu(false)">Contact Us <span>›</span></a></li>
+    </ul>
+
+    <div style="margin-top:auto; padding-top:20px; border-top:1px solid var(--color-border-hairline);">
+      <a href="https://app.reconpro.io" target="_blank" rel="noopener" class="btn-secondary-outline" style="width:100%; justify-content:center; margin-bottom:10px;">
+        🔑 Portal Sign-In
+      </a>
+      <a href="#heroLeadForm" class="btn-primary-violet" style="width:100%; text-align:center;" onclick="toggleMobileMenu(false)">
+        Start an Engagement
+      </a>
+    </div>
+  </aside>
+
   <!-- ==========================================================================
-       HEADER NAVIGATION (Institutional Violet Design — Row 1 + Row 2)
+       HEADER NAVIGATION (Institutional Violet Design — Mobile & Desktop)
        ========================================================================== -->
   <header class="site-header">
     <!-- Row 1: Brand Logo, Tagline & Action Buttons -->
@@ -29,13 +62,16 @@
         <a href="https://app.reconpro.io" target="_blank" rel="noopener" class="btn-secondary-outline">
           🔑 Portal Sign-In
         </a>
-        <a href="#consultation" class="btn-primary-violet">
+        <a href="#heroLeadForm" class="btn-primary-violet">
           Start an Engagement
         </a>
+        <button class="mobile-menu-toggle" onclick="toggleMobileMenu(true)" aria-label="Open Navigation Menu">
+          ☰
+        </button>
       </div>
     </div>
 
-    <!-- Row 2: Streamlined 4-Umbrella Navigation Links -->
+    <!-- Row 2: Streamlined 4-Umbrella Navigation Links (Desktop) -->
     <div class="header-nav-row">
       <ul class="nav-links-list">
         <li class="nav-item">
@@ -46,7 +82,7 @@
             <a href="#process" class="dropdown-item">4-Step Construction Framework</a>
             <a href="#services-list" class="dropdown-item">11 Specialized Advisory Services</a>
             <a href="#packages" class="dropdown-item">Package Specification Tiers</a>
-            <a href="#portfolio" class="dropdown-item">Assets Under Management (AUM)</a>
+            <a href="#about" class="dropdown-item">Assets Under Management (AUM)</a>
           </div>
         </li>
 
@@ -90,7 +126,7 @@
   <!-- ==========================================================================
        VIEWPORT LOCKED HERO + CONNECTED METRIC BLOCK
        ========================================================================== -->
-  <section class="hero-viewport-block">
+  <section class="hero-viewport-block" id="services">
     <div class="hero-main-banner">
       <div class="container">
         <div class="hero-grid">
@@ -225,7 +261,6 @@
       </div>
 
       <div class="comparison-grid">
-        <!-- Nightmare Card -->
         <div class="comparison-card card-problem">
           <h3>❌ Typical Home Construction Traps</h3>
           <ul class="comparison-list">
@@ -248,7 +283,6 @@
           </ul>
         </div>
 
-        <!-- Shield Card -->
         <div class="comparison-card card-shield">
           <h3>🛡️ The ReconPro Advisory Shield</h3>
           <ul class="comparison-list">
@@ -346,8 +380,8 @@
 
         <div class="rebos-content-grid">
           <div>
-            <h3 class="font-heading" style="font-size:24px; margin-bottom:12px;" id="rebosRoleTitle">Client Dashboard — Watch Your Home Get Built</h3>
-            <p style="color:var(--color-on-surface-variant); line-height:1.6; margin-bottom:24px;" id="rebosRoleDesc">
+            <h3 class="font-heading" style="font-size:22px; margin-bottom:12px;" id="rebosRoleTitle">Client Dashboard — Watch Your Home Get Built</h3>
+            <p style="color:var(--color-on-surface-variant); line-height:1.6; margin-bottom:24px; font-size:14px;" id="rebosRoleDesc">
               Track overall progress, stage-wise photo evidence, verified payment milestones, and procurement triggers from your mobile or desktop 24x7.
             </p>
 
@@ -367,9 +401,9 @@
             </div>
           </div>
 
-          <div style="background-color:var(--color-lavender-tint); border:1px solid var(--color-orchid-mid-20); padding:32px; text-align:center;">
-            <div style="font-size:48px; margin-bottom:16px;">📱</div>
-            <h4 style="font-size:20px; font-weight:700; margin-bottom:8px;">Live Project Timeline</h4>
+          <div style="background-color:var(--color-lavender-tint); border:1px solid var(--color-orchid-mid-20); padding:28px; text-align:center;">
+            <div style="font-size:40px; margin-bottom:12px;">📱</div>
+            <h4 style="font-size:18px; font-weight:700; margin-bottom:8px;">Live Project Timeline</h4>
             <p style="font-size:13px; color:var(--color-on-surface-variant); margin-bottom:20px;">
               Real-time variance tracking: Planned vs Actual dates on every activity.
             </p>
@@ -449,25 +483,25 @@
         <div class="package-card">
           <div class="package-name">Economy</div>
           <div class="package-desc">For limited budgets & future interior finishes. Basic tile flooring, site-made wooden doors, basic modular switches.</div>
-          <a href="#consultation" class="btn-secondary-outline" style="text-align:center; margin-top:auto;">View Specs</a>
+          <a href="#heroLeadForm" class="btn-secondary-outline" style="text-align:center; margin-top:auto;">View Specs</a>
         </div>
 
         <div class="package-card">
           <div class="package-name">Budget</div>
           <div class="package-desc">For clients looking for functional, durable interiors. Standard vitrified tiles, UPVC windows, branded sanitary fittings.</div>
-          <a href="#consultation" class="btn-secondary-outline" style="text-align:center; margin-top:auto;">View Specs</a>
+          <a href="#heroLeadForm" class="btn-secondary-outline" style="text-align:center; margin-top:auto;">View Specs</a>
         </div>
 
         <div class="package-card highlight">
           <div class="package-name" style="color:var(--color-primary);">Deluxe ⭐</div>
           <div class="package-desc">Comfortable interiors & enhanced functionality. Italian marble option, premium sanitary ware, earthquake-resistant RCC.</div>
-          <a href="#consultation" class="btn-primary-violet" style="text-align:center; margin-top:auto;">View Specs</a>
+          <a href="#heroLeadForm" class="btn-primary-violet" style="text-align:center; margin-top:auto;">View Specs</a>
         </div>
 
         <div class="package-card">
           <div class="package-name">Premium</div>
           <div class="package-desc">Luxury interiors, high utility & smart features. Imported stone, concealed VRV AC piping, custom facade paneling.</div>
-          <a href="#consultation" class="btn-secondary-outline" style="text-align:center; margin-top:auto;">View Specs</a>
+          <a href="#heroLeadForm" class="btn-secondary-outline" style="text-align:center; margin-top:auto;">View Specs</a>
         </div>
       </div>
     </div>
@@ -527,7 +561,7 @@
   </section>
 
   <!-- ==========================================================================
-       FOOTER & FLOATING ACTION
+       FOOTER & MOBILE CTA BAR
        ========================================================================== -->
   <footer class="site-footer" id="contact">
     <div class="container">
@@ -549,9 +583,9 @@
           <h4>Advisory</h4>
           <ul class="footer-links">
             <li><a href="#process">4-Step Process</a></li>
-            <li><a href="#services-list">Specialized Services</a></li>
+            <li><a href="#services">Specialized Services</a></li>
             <li><a href="#packages">Package Specifications</a></li>
-            <li><a href="#portfolio">AUM Portfolio</a></li>
+            <li><a href="#about">AUM Portfolio</a></li>
           </ul>
         </div>
 
@@ -559,18 +593,18 @@
           <h4>Tools & Tech</h4>
           <ul class="footer-links">
             <li><a href="#rebos">ReBOS Construction App</a></li>
-            <li><a href="https://app.reconpro.io" target="_blank">ReBOS Portal Sign-In</a></li>
-            <li><a href="#calculator">FAR & Cost Calculator</a></li>
-            <li><a href="#geospatial">ASI & Metro Checker</a></li>
+            <li><a href="https://app.reconpro.io" target="_blank" rel="noopener">ReBOS Portal Sign-In</a></li>
+            <li><a href="#tools">FAR & Cost Calculator</a></li>
+            <li><a href="#tools">ASI & Metro Checker</a></li>
           </ul>
         </div>
 
         <div class="footer-column">
           <h4>Contact & Location</h4>
-          <p style="font-size:13px; color:rgba(243,234,251,0.8); line-height:1.6; margin-bottom:12px;">
+          <p style="font-size:12px; color:rgba(243,234,251,0.8); line-height:1.6; margin-bottom:10px;">
             📍 Spaze i-Tech Park, Tower B4, Unit 312, Sector 49, Sohna Road, Gurugram, Haryana - 122018
           </p>
-          <p style="font-size:13px; color:rgba(243,234,251,0.8);">
+          <p style="font-size:12px; color:rgba(243,234,251,0.8);">
             📞 +91 9971007906<br>
             ✉️ info@reconpro.io
           </p>
@@ -587,11 +621,26 @@
     </div>
   </footer>
 
-  <!-- Floating WhatsApp CTA -->
+  <!-- Desktop Floating WhatsApp Button -->
   <a href="https://wa.me/919971007906?text=Hi%2C%20I%20have%20a%20query%20regarding%20home%20construction%20advisory" target="_blank" class="floating-whatsapp-btn">
     💬 Chat on WhatsApp
   </a>
 
-  <script src="/main.js"></script>
+  <!-- Mobile Fixed Bottom Action Bar (<768px) -->
+  <div class="mobile-bottom-bar">
+    <div class="mobile-bottom-grid">
+      <a href="tel:+919971007906" class="mobile-cta-btn btn-mobile-call">
+        📞 Call
+      </a>
+      <a href="https://wa.me/919971007906?text=Hi%2C%20I%20need%20advisory%20for%20my%20home%20construction" target="_blank" class="mobile-cta-btn btn-mobile-wa">
+        💬 WhatsApp
+      </a>
+      <a href="#heroLeadForm" class="mobile-cta-btn btn-mobile-lead">
+        ⚡ Estimate
+      </a>
+    </div>
+  </div>
+
+  <script type="module" src="/main.js"></script>
 </body>
 </html>
