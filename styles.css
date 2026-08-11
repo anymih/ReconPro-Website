@@ -1,28 +1,28 @@
-/* RECONPRO — Executive Warm Minimalist System (Soft Lavender-Violet Accent) */
+/* RECONPRO — Institutional Violet System (LOCKED v1.0 to DESIGN (1).md) */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap');
 
 :root {
-  /* Warm Minimalist Color Tokens */
-  --color-warm-bg: #FAF9F5;              /* Soft warm off-white base */
-  --color-header-bg: #FCFBF8;            /* Eye-comfortable warm header tone */
-  --color-primary: #7C3AED;              /* ReconPro Brand Violet Accent */
-  --color-primary-soft: #8B5CF6;         /* Softer non-glare violet */
-  --color-deep-indigo: #1E1B2E;          /* Rich executive ink */
+  /* Strictly Locked Color Tokens from DESIGN (1).md */
+  --color-primary: #7C3AED;              /* Primary Violet Accent */
+  --color-on-primary: #FFFFFF;
+  --color-primary-hover: #3D2A5C;        /* Deep Indigo Hover */
+  --color-deep-indigo: #3D2A5C;          /* Deep Indigo Backgrounds */
   --color-on-deep-indigo: #FFFFFF;
-  --color-lavender-tint: #F4EEF8;        /* Subtle lavender fill */
+  --color-lavender-tint: #F3EAFB;        /* Lavender Tint Section Fill */
   --color-orchid-mid: #A78BDB;
   --color-orchid-mid-15: rgba(167, 139, 219, 0.15);
   --color-orchid-mid-20: rgba(167, 139, 219, 0.20);
-  --color-ink-black: #111827;            /* Soft dark headings */
-  --color-ink-black-40: #6B7280;         /* Soft muted text */
-  --color-border-hairline: #E8E5DE;       /* Soft warm hairline border */
-  --color-canvas-white: #FFFFFF;
-  --color-surface-container: #F3F0E6;
-  --color-on-surface-variant: #4B5563;
+  --color-ink-black: #1A1625;            /* Primary Ink Black Text */
+  --color-ink-black-8: rgba(26, 22, 37, 0.08);
+  --color-canvas-white: #FFFFFF;          /* Canvas White Page & Header */
+  --color-surface-container: #F3EAFB;     /* Lavender Container */
+  --color-on-surface-variant: #4A4455;
+  --color-border-hairline: rgba(26, 22, 37, 0.08);
 
-  /* Typography Tokens */
-  --font-heading: 'Plus Jakarta Sans', sans-serif;
-  --font-body: 'Inter', sans-serif;
+  /* Universal Web Typography (Plus Jakarta Sans + Inter) */
+  --font-heading: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-ui-accent: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
 
   /* Layout Tokens */
   --header-height: 105px;
@@ -42,7 +42,7 @@ html {
   scroll-behavior: smooth;
   font-family: var(--font-body);
   color: var(--color-ink-black);
-  background-color: var(--color-warm-bg);
+  background-color: var(--color-canvas-white);
   -webkit-font-smoothing: antialiased;
   touch-action: manipulation;
 }
@@ -50,7 +50,7 @@ html {
 body {
   overflow-x: hidden;
   position: relative;
-  background-color: var(--color-warm-bg);
+  background-color: var(--color-canvas-white);
 }
 
 .container {
@@ -77,19 +77,19 @@ h1, h2, h3, h4, .font-heading {
   align-items: center;
   gap: 8px;
   padding: 6px 14px;
-  background-color: var(--color-surface-container);
-  color: var(--color-deep-indigo);
-  font-family: var(--font-body);
+  background-color: var(--color-lavender-tint);
+  color: var(--color-primary);
+  font-family: var(--font-ui-accent);
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  border: 1px solid var(--color-border-hairline);
+  border: 1px solid var(--color-orchid-mid-20);
   margin-bottom: 16px;
 }
 
 /* ==========================================================================
-   WARM MINIMALIST HEADER NAVIGATION (ReconPro Content Intact)
+   HEADER NAVIGATION (Canvas White Background + Pure Hover Accent)
    ========================================================================== */
 .site-header {
   position: sticky;
@@ -97,7 +97,7 @@ h1, h2, h3, h4, .font-heading {
   left: 0;
   width: 100%;
   z-index: 1000;
-  background-color: var(--color-header-bg);
+  background-color: var(--color-canvas-white);
   border-bottom: 1px solid var(--color-border-hairline);
 }
 
@@ -130,7 +130,7 @@ h1, h2, h3, h4, .font-heading {
 
 .wordmark {
   font-family: var(--font-heading);
-  font-size: 21px;
+  font-size: 22px;
   font-weight: 800;
   color: var(--color-ink-black);
   letter-spacing: -0.02em;
@@ -163,10 +163,10 @@ h1, h2, h3, h4, .font-heading {
   justify-content: center;
   gap: 8px;
   padding: 11px 22px;
-  background-color: var(--color-deep-indigo);
-  color: #FFFFFF;
-  border: 1px solid var(--color-deep-indigo);
-  font-family: var(--font-body);
+  background-color: var(--color-primary);
+  color: var(--color-on-primary);
+  border: 1px solid var(--color-primary);
+  font-family: var(--font-ui-accent);
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.05em;
@@ -179,8 +179,8 @@ h1, h2, h3, h4, .font-heading {
 
 .header-cta-dropdown-wrapper:hover .cta-dropdown-trigger,
 .cta-dropdown-trigger:hover {
-  background-color: var(--color-primary);
-  border-color: var(--color-primary);
+  background-color: var(--color-deep-indigo);
+  border-color: var(--color-deep-indigo);
 }
 
 .cta-dropdown-menu {
@@ -190,7 +190,7 @@ h1, h2, h3, h4, .font-heading {
   min-width: 340px;
   background-color: var(--color-canvas-white);
   border: 1px solid var(--color-border-hairline);
-  box-shadow: 0 16px 36px rgba(17, 24, 39, 0.12);
+  box-shadow: 0 16px 36px rgba(26, 22, 37, 0.12);
   display: none;
   flex-direction: column;
   z-index: 2200;
@@ -267,14 +267,14 @@ h1, h2, h3, h4, .font-heading {
   display: flex;
   align-items: center;
   padding: 0 24px;
-  background-color: var(--color-header-bg);
+  background-color: var(--color-canvas-white);
 }
 
 .nav-links-list {
   display: flex;
   align-items: center;
   list-style: none;
-  gap: 36px;
+  gap: 40px;
 }
 
 .nav-item {
@@ -285,36 +285,34 @@ h1, h2, h3, h4, .font-heading {
   display: flex;
   align-items: center;
   gap: 6px;
-  padding: 12px 0;
-  font-family: var(--font-body);
-  font-size: 12px;
+  padding: 14px 0;
+  font-family: var(--font-ui-accent);
+  font-size: 13px;
   font-weight: 600;
-  color: var(--color-on-surface-variant);
+  color: var(--color-ink-black);
   text-decoration: none;
   letter-spacing: 0.04em;
   text-transform: uppercase;
   transition: color 0.2s ease;
 }
 
-.nav-link:hover,
-.nav-link.active {
-  color: var(--color-ink-black);
+/* Foolproof Hover-Only Underline */
+.nav-link:hover {
+  color: var(--color-primary);
 }
 
-/* Soft Lavender Active Underline Bar */
 .nav-link::after {
   content: '';
   position: absolute;
   bottom: 0;
   left: 0;
   width: 0%;
-  height: 2.5px;
-  background-color: var(--color-primary-soft);
+  height: 3px;
+  background-color: var(--color-primary);
   transition: width 0.25s ease;
 }
 
-.nav-link:hover::after,
-.nav-link.active::after {
+.nav-link:hover::after {
   width: 100%;
 }
 
@@ -358,7 +356,7 @@ h1, h2, h3, h4, .font-heading {
   right: -100%;
   width: 300px;
   height: 100vh;
-  background-color: var(--color-header-bg);
+  background-color: var(--color-canvas-white);
   z-index: 3000;
   box-shadow: -10px 0 30px rgba(0,0,0,0.1);
   display: flex;
@@ -416,7 +414,7 @@ h1, h2, h3, h4, .font-heading {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(17, 24, 39, 0.4);
+  background: rgba(26, 22, 37, 0.4);
   z-index: 2999;
   display: none;
 }
@@ -426,14 +424,14 @@ h1, h2, h3, h4, .font-heading {
 }
 
 /* ==========================================================================
-   HERO BANNER & CONNECTED METRIC BAR
+   HERO BANNER (100% Full Edge-to-Edge Overlay)
    ========================================================================== */
 .hero-viewport-block {
   display: flex;
   flex-direction: column;
-  min-height: calc(100vh - var(--header-height));
   position: relative;
   background-color: var(--color-deep-indigo);
+  overflow: hidden;
 }
 
 .hero-main-banner {
@@ -441,12 +439,29 @@ h1, h2, h3, h4, .font-heading {
   position: relative;
   display: flex;
   align-items: center;
-  padding: 48px 0;
-  background-image: linear-gradient(135deg, rgba(17, 24, 39, 0.92) 0%, rgba(30, 27, 46, 0.85) 100%), url('/assets/reconpro_hero_bg.png');
+  padding: 56px 0;
+  overflow: hidden;
+}
+
+.hero-main-banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(180deg, rgba(26, 22, 37, 0.90) 0%, rgba(61, 42, 92, 0.94) 100%), url('/assets/reconpro_hero_bg.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  border-bottom: 1px solid var(--color-border-hairline);
+  z-index: 0;
+}
+
+.hero-main-banner > .container {
+  position: relative;
+  z-index: 1;
 }
 
 .hero-grid {
@@ -469,13 +484,13 @@ h1, h2, h3, h4, .font-heading {
 }
 
 .hero-title span {
-  color: #DDD6FE;
+  color: #C4B5FD;
 }
 
 .hero-subtitle {
   font-size: clamp(0.95rem, 1.8vw, 1.1rem);
   line-height: 1.6;
-  color: rgba(255, 255, 255, 0.85);
+  color: rgba(243, 234, 251, 0.88);
   margin-bottom: 28px;
   max-width: 620px;
 }
@@ -492,8 +507,8 @@ h1, h2, h3, h4, .font-heading {
   align-items: center;
   gap: 8px;
   padding: 8px 14px;
-  background-color: rgba(255, 255, 255, 0.10);
-  border: 1px solid rgba(255, 255, 255, 0.20);
+  background-color: rgba(243, 234, 251, 0.12);
+  border: 1px solid rgba(167, 139, 219, 0.30);
   color: #FFFFFF;
   font-family: var(--font-body);
   font-size: 12px;
@@ -505,7 +520,7 @@ h1, h2, h3, h4, .font-heading {
   align-items: center;
   gap: 10px;
   padding: 10px 16px;
-  background-color: rgba(124, 58, 237, 0.20);
+  background-color: rgba(124, 58, 237, 0.25);
   border-left: 3px solid var(--color-primary);
   color: #FFFFFF;
   font-size: 12px;
@@ -562,7 +577,7 @@ h1, h2, h3, h4, .font-heading {
   font-family: var(--font-body);
   font-size: 14px;
   color: var(--color-ink-black);
-  background-color: var(--color-surface-container);
+  background-color: var(--color-lavender-tint);
   border: 1px solid var(--color-border-hairline);
   outline: none;
   transition: border-color 0.2s ease;
@@ -570,7 +585,7 @@ h1, h2, h3, h4, .font-heading {
 }
 
 .form-input:focus, .form-select:focus {
-  border-color: var(--color-deep-indigo);
+  border-color: var(--color-primary);
   background-color: #FFFFFF;
 }
 
@@ -584,9 +599,9 @@ h1, h2, h3, h4, .font-heading {
   width: 100%;
   padding: 14px;
   margin-top: 6px;
-  background-color: var(--color-deep-indigo);
+  background-color: var(--color-primary);
   color: #FFFFFF;
-  border: 1px solid var(--color-deep-indigo);
+  border: 1px solid var(--color-primary);
   font-family: var(--font-body);
   font-size: 12px;
   font-weight: 700;
@@ -598,8 +613,8 @@ h1, h2, h3, h4, .font-heading {
 }
 
 .btn-form-submit:hover {
-  background-color: var(--color-primary);
-  border-color: var(--color-primary);
+  background-color: var(--color-deep-indigo);
+  border-color: var(--color-deep-indigo);
 }
 
 .form-disclaimer {
@@ -610,24 +625,29 @@ h1, h2, h3, h4, .font-heading {
   line-height: 1.4;
 }
 
-/* CONNECTED METRIC BAR */
+/* ==========================================================================
+   REDESIGNED ELEGANT CONNECTED METRIC BAR (Lavender Tint #F3EAFB Container)
+   ========================================================================== */
 .connected-metric-bar {
-  background-color: #171524;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  padding: 20px 0;
+  position: relative;
+  z-index: 2;
+  background-color: var(--color-lavender-tint);
+  border-top: 1px solid var(--color-orchid-mid-20);
+  border-bottom: 1px solid var(--color-border-hairline);
+  padding: 28px 0;
 }
 
 .metrics-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 16px;
+  gap: 20px;
 }
 
 .metric-item {
   display: flex;
   flex-direction: column;
-  padding: 0 12px;
-  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0 16px;
+  border-right: 1px solid var(--color-orchid-mid-20);
 }
 
 .metric-item:last-child {
@@ -636,30 +656,32 @@ h1, h2, h3, h4, .font-heading {
 
 .metric-number {
   font-family: var(--font-heading);
-  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  font-size: clamp(1.6rem, 3.2vw, 2.4rem);
   font-weight: 800;
-  color: #FFFFFF;
+  color: var(--color-ink-black);          /* Solid High-Contrast Ink Black */
   line-height: 1;
-  margin-bottom: 4px;
+  margin-bottom: 6px;
 }
 
 .metric-number span {
-  color: #DDD6FE;
+  color: var(--color-ink-black);
 }
 
 .metric-label {
-  font-family: var(--font-body);
+  font-family: var(--font-ui-accent);
   font-size: 11px;
-  font-weight: 600;
-  color: #FFFFFF;
-  margin-bottom: 2px;
-  letter-spacing: 0.03em;
+  font-weight: 700;
+  color: var(--color-ink-black);          /* Crisp Ink Black Title */
+  margin-bottom: 3px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
 }
 
 .metric-sublabel {
   font-family: var(--font-body);
-  font-size: 10px;
-  color: rgba(255, 255, 255, 0.6);
+  font-size: 11px;
+  color: var(--color-on-surface-variant); /* Muted legible body text */
+  line-height: 1.4;
 }
 
 /* ==========================================================================
@@ -680,7 +702,7 @@ h1, h2, h3, h4, .font-heading {
 }
 
 .section-bg-lavender {
-  background-color: var(--color-warm-bg);
+  background-color: var(--color-lavender-tint);
 }
 
 .section-header-center {
@@ -709,9 +731,19 @@ h1, h2, h3, h4, .font-heading {
 }
 
 .comparison-card {
-  padding: 28px 24px;
+  padding: 24px;
   border: 1px solid var(--color-border-hairline);
   background-color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+}
+
+.comparison-card-img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  margin-bottom: 20px;
+  border: 1px solid var(--color-border-hairline);
 }
 
 .comparison-card.card-problem {
@@ -719,8 +751,8 @@ h1, h2, h3, h4, .font-heading {
 }
 
 .comparison-card.card-shield {
-  border-left: 4px solid var(--color-deep-indigo);
-  background-color: #FCFBF8;
+  border-left: 4px solid var(--color-primary);
+  background-color: var(--color-lavender-tint);
 }
 
 .comparison-card h3 {
@@ -750,7 +782,7 @@ h1, h2, h3, h4, .font-heading {
 }
 
 .icon-good {
-  color: var(--color-deep-indigo);
+  color: var(--color-primary);
   font-weight: bold;
 }
 
@@ -774,7 +806,7 @@ h1, h2, h3, h4, .font-heading {
   font-family: var(--font-heading);
   font-size: 32px;
   font-weight: 800;
-  color: var(--color-deep-indigo);
+  color: var(--color-primary);
   line-height: 1;
   margin-bottom: 12px;
 }
@@ -815,15 +847,15 @@ h1, h2, h3, h4, .font-heading {
   font-family: var(--font-body);
   font-size: 13px;
   font-weight: 600;
-  color: var(--color-on-surface-variant);
+  color: var(--color-ink-black);
   cursor: pointer;
   transition: all 0.2s ease;
   white-space: nowrap;
 }
 
 .rebos-tab-btn.active, .rebos-tab-btn:hover {
-  color: var(--color-ink-black);
-  border-bottom-color: var(--color-ink-black);
+  color: var(--color-primary);
+  border-bottom-color: var(--color-primary);
 }
 
 .rebos-content-grid {
@@ -842,13 +874,13 @@ h1, h2, h3, h4, .font-heading {
 .stage-pill-box {
   padding: 14px 16px;
   border: 1px solid var(--color-border-hairline);
-  background-color: var(--color-surface-container);
+  background-color: var(--color-lavender-tint);
 }
 
 .stage-pill-box h4 {
   font-size: 14px;
   font-weight: 700;
-  color: var(--color-deep-indigo);
+  color: var(--color-primary);
   margin-bottom: 4px;
 }
 
@@ -908,8 +940,8 @@ h1, h2, h3, h4, .font-heading {
 }
 
 .package-card.highlight {
-  border: 2px solid var(--color-deep-indigo);
-  background-color: #FCFBF8;
+  border: 2px solid var(--color-primary);
+  background-color: var(--color-lavender-tint);
 }
 
 .package-name {
@@ -947,7 +979,7 @@ h1, h2, h3, h4, .font-heading {
 .leader-role {
   font-size: 11px;
   font-weight: 700;
-  color: var(--color-deep-indigo);
+  color: var(--color-primary);
   text-transform: uppercase;
   letter-spacing: 0.05em;
   margin: 4px 0 10px 0;
@@ -961,10 +993,10 @@ h1, h2, h3, h4, .font-heading {
 
 /* Footer */
 .site-footer {
-  background-color: #171524;
+  background-color: var(--color-deep-indigo);
   color: #FFFFFF;
   padding: 48px 0 24px 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid var(--color-orchid-mid-20);
 }
 
 .footer-grid {
@@ -976,7 +1008,7 @@ h1, h2, h3, h4, .font-heading {
 
 .footer-brand p {
   font-size: 13px;
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(243, 234, 251, 0.75);
   line-height: 1.6;
   margin-top: 12px;
 }
@@ -998,7 +1030,7 @@ h1, h2, h3, h4, .font-heading {
 }
 
 .footer-links a {
-  color: rgba(255, 255, 255, 0.75);
+  color: rgba(243, 234, 251, 0.75);
   font-size: 12px;
   text-decoration: none;
   transition: color 0.2s ease;
@@ -1010,12 +1042,12 @@ h1, h2, h3, h4, .font-heading {
 
 .footer-bottom {
   padding-top: 24px;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid var(--color-orchid-mid-15);
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-size: 11px;
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(243, 234, 251, 0.6);
 }
 
 /* Mobile Fixed Bottom Bar */
@@ -1025,8 +1057,8 @@ h1, h2, h3, h4, .font-heading {
   bottom: 0;
   left: 0;
   width: 100%;
-  background-color: #171524;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: var(--color-ink-black);
+  border-top: 1px solid var(--color-orchid-mid-20);
   padding: 10px 16px;
   z-index: 2500;
 }
@@ -1053,9 +1085,9 @@ h1, h2, h3, h4, .font-heading {
 }
 
 .btn-mobile-call {
-  background-color: rgba(255, 255, 255, 0.12);
+  background-color: rgba(243, 234, 251, 0.12);
   color: #FFFFFF;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(167, 139, 219, 0.3);
 }
 
 .btn-mobile-wa {
@@ -1065,9 +1097,9 @@ h1, h2, h3, h4, .font-heading {
 }
 
 .btn-mobile-lead {
-  background-color: var(--color-deep-indigo);
+  background-color: var(--color-primary);
   color: #FFFFFF;
-  border: 1px solid var(--color-deep-indigo);
+  border: 1px solid var(--color-primary);
 }
 
 /* Responsive Media Queries */
