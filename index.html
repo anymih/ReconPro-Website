@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RECONPRO | Your Knowledge Partner in Home Construction</title>
+  <meta name="description" content="100% independent techno-commercial advisory for plot owners in Delhi NCR. IIT & IIM alumni guided construction planning, agreement review, and ReBOS site management.">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       HEADER NAVIGATION (Institutional Violet Design — Row 1 + Row 2)
+       ========================================================================== -->
+  <header class="site-header">
+    <!-- Row 1: Brand Logo, Tagline & Action Buttons -->
+    <div class="header-top-row">
+      <a href="/" class="brand-container">
+        <div class="logo-hexagon">
+          <span>⬡</span>
+        </div>
+        <div class="brand-text-block">
+          <span class="wordmark">RECONPRO</span>
+          <span class="tagline">Your Knowledge Partner in Home Construction</span>
+        </div>
+      </a>
+
+      <div class="header-actions">
+        <a href="https://app.reconpro.io" target="_blank" rel="noopener" class="btn-secondary-outline">
+          🔑 Portal Sign-In
+        </a>
+        <a href="#consultation" class="btn-primary-violet">
+          Start an Engagement
+        </a>
+      </div>
+    </div>
+
+    <!-- Row 2: Streamlined 4-Umbrella Navigation Links -->
+    <div class="header-nav-row">
+      <ul class="nav-links-list">
+        <li class="nav-item">
+          <a href="#services" class="nav-link active">
+            Advisory Services ▾
+          </a>
+          <div class="dropdown-menu">
+            <a href="#process" class="dropdown-item">4-Step Construction Framework</a>
+            <a href="#services-list" class="dropdown-item">11 Specialized Advisory Services</a>
+            <a href="#packages" class="dropdown-item">Package Specification Tiers</a>
+            <a href="#portfolio" class="dropdown-item">Assets Under Management (AUM)</a>
+          </div>
+        </li>
+
+        <li class="nav-item">
+          <a href="#rebos" class="nav-link">
+            ReBOS Tech ▾
+          </a>
+          <div class="dropdown-menu">
+            <a href="#rebos" class="dropdown-item">Builder Operating System Overview</a>
+            <a href="#rebos-roles" class="dropdown-item">Role Dashboards (Client/Builder/Supervisor)</a>
+            <a href="#rebos-demo" class="dropdown-item">Book a Live ReBOS Demo</a>
+          </div>
+        </li>
+
+        <li class="nav-item">
+          <a href="#tools" class="nav-link">
+            Tools & Resources ▾
+          </a>
+          <div class="dropdown-menu">
+            <a href="#calculator" class="dropdown-item">Free FAR & Construction Cost Calculator</a>
+            <a href="#geospatial" class="dropdown-item">ASI & Metro Restriction Map Tool</a>
+            <a href="#byelaws" class="dropdown-item">City Building Bye-Laws Hub (Delhi/NCR)</a>
+            <a href="#material-guides" class="dropdown-item">Construction Material Guides & Blogs</a>
+          </div>
+        </li>
+
+        <li class="nav-item">
+          <a href="#about" class="nav-link">
+            Company ▾
+          </a>
+          <div class="dropdown-menu">
+            <a href="#about" class="dropdown-item">About ReconPro & IIT/IIM Team</a>
+            <a href="#testimonials" class="dropdown-item">Client Testimonials & Case Studies</a>
+            <a href="#contact" class="dropdown-item">Contact Us</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       VIEWPORT LOCKED HERO + CONNECTED METRIC BLOCK
+       ========================================================================== -->
+  <section class="hero-viewport-block">
+    <div class="hero-main-banner">
+      <div class="container">
+        <div class="hero-grid">
+
+          <!-- Hero Left Column: Declarative Positioning -->
+          <div class="hero-left-content">
+            <div class="eyebrow-badge">
+              <span>🏛️ INDEPENDENT TECHNO-COMMERCIAL ADVISORY</span>
+            </div>
+            
+            <h1 class="hero-title">
+              Planning to Build a Home in Delhi NCR? <span>Protect Your Money, Quality & Timeline</span> Before You Lay a Single Brick.
+            </h1>
+            
+            <p class="hero-subtitle">
+              100% impartial advisory backed by IIT & IIM experts. We don't sell property or build homes—we ensure your contractor delivers 100% quality without cost overruns.
+            </p>
+
+            <div class="trust-pill-strip">
+              <div class="trust-pill">
+                <span>📱 ReBOS Live App Tracking</span>
+              </div>
+              <div class="trust-pill">
+                <span>⚖️ 0% Contractor Bias</span>
+              </div>
+              <div class="trust-pill">
+                <span>🔒 Milestone Payment Security</span>
+              </div>
+            </div>
+
+            <div class="guarantee-badge">
+              <span>🛡️ Independent Advisory Guarantee: No Hidden Costs & No Builder Commission</span>
+            </div>
+          </div>
+
+          <!-- Hero Right Column: Embedded Lead Magnet Card -->
+          <div class="hero-right-card">
+            <div class="lead-capture-card">
+              <div class="card-header-block">
+                <h3 class="card-title">Plan Your Home Build</h3>
+                <p class="card-subtitle">Get an instant construction cost, FAR & risk evaluation report</p>
+              </div>
+
+              <form class="lead-form" id="heroLeadForm" onsubmit="handleFormSubmit(event)">
+                <div class="form-group">
+                  <label class="form-label" for="leadName">Full Name *</label>
+                  <input type="text" id="leadName" class="form-input" placeholder="e.g. Rajesh Sharma" required>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="leadPhone">Mobile Number (+91) *</label>
+                  <input type="tel" id="leadPhone" class="form-input" placeholder="98765 43210" pattern="[0-9]{10}" required>
+                </div>
+
+                <div class="form-row-2col">
+                  <div class="form-group">
+                    <label class="form-label" for="leadCity">Plot Location *</label>
+                    <select id="leadCity" class="form-select" required>
+                      <option value="Gurugram">Gurugram</option>
+                      <option value="Delhi">Delhi MCD</option>
+                      <option value="Noida">Noida / Gr. Noida</option>
+                      <option value="Faridabad">Faridabad</option>
+                    </select>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="leadSize">Plot Size (sq. yds) *</label>
+                    <input type="number" id="leadSize" class="form-input" placeholder="e.g. 250" min="50" max="2000" required>
+                  </div>
+                </div>
+
+                <button type="submit" class="btn-form-submit">
+                  Get Instant Advisory Summary
+                </button>
+
+                <p class="form-disclaimer">
+                  🔒 100% Confidential. Instant summary sent directly to WhatsApp & Email.
+                </p>
+              </form>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Connected Metric Bar (Seamlessly Attached to Hero Block) -->
+    <div class="connected-metric-bar">
+      <div class="container">
+        <div class="metrics-grid">
+          
+          <div class="metric-item">
+            <div class="metric-number">100,000<span>+</span></div>
+            <div class="metric-label">SQ. FT. CONSTRUCTED</div>
+            <div class="metric-sublabel">Guided & Audited Successfully</div>
+          </div>
+
+          <div class="metric-item">
+            <div class="metric-number">2,000<span>+</span></div>
+            <div class="metric-label">QA CHECKPOINTS</div>
+            <div class="metric-sublabel">Driven by ReBOS Engine</div>
+          </div>
+
+          <div class="metric-item">
+            <div class="metric-number">15<span>+ YEARS</span></div>
+            <div class="metric-label">DOMAIN EXPERTISE</div>
+            <div class="metric-sublabel">IIT, IIM & Architecture Leadership</div>
+          </div>
+
+          <div class="metric-item">
+            <div class="metric-number">100<span>%</span></div>
+            <div class="metric-label">IMPARTIAL ADVISORY</div>
+            <div class="metric-sublabel">Zero Contractor Bias or Commissions</div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION: THE CONTRACTOR NIGHTMARE VS THE RECONPRO SHIELD
+       ========================================================================== -->
+  <section class="section-padding section-bg-white" id="why-reconpro">
+    <div class="container">
+      <div class="section-header-center">
+        <div class="eyebrow-badge">RISK MITIGATION</div>
+        <h2 class="section-title">The Real Estate Market Noise vs. The ReconPro Shield</h2>
+        <p class="section-subtitle">
+          In a market clouded by biased referrals, hidden quotes, and one-sided builder contracts, we exist solely to protect your financial and quality interests.
+        </p>
+      </div>
+
+      <div class="comparison-grid">
+        <!-- Nightmare Card -->
+        <div class="comparison-card card-problem">
+          <h3>❌ Typical Home Construction Traps</h3>
+          <ul class="comparison-list">
+            <li class="comparison-item">
+              <span class="icon-bad">✕</span>
+              <span><strong>Cost Escalations:</strong> Low initial quotes followed by non-stop extra bills during mid-construction.</span>
+            </li>
+            <li class="comparison-item">
+              <span class="icon-bad">✕</span>
+              <span><strong>Substandard Materials:</strong> Lower grade steel, non-seismic cement, and cheap plumbing hidden behind tiles.</span>
+            </li>
+            <li class="comparison-item">
+              <span class="icon-bad">✕</span>
+              <span><strong>One-Sided Agreements:</strong> Contractor-drafted contracts with zero penalties for delay or poor execution.</span>
+            </li>
+            <li class="comparison-item">
+              <span class="icon-bad">✕</span>
+              <span><strong>Zero Accountability:</strong> Paying full milestone money before stage quality is actually verified.</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Shield Card -->
+        <div class="comparison-card card-shield">
+          <h3>🛡️ The ReconPro Advisory Shield</h3>
+          <ul class="comparison-list">
+            <li class="comparison-item">
+              <span class="icon-good">✓</span>
+              <span><strong>Fixed Spec & Contract Review:</strong> Ironclad agreement redrafting with strict scope and price locks.</span>
+            </li>
+            <li class="comparison-item">
+              <span class="icon-good">✓</span>
+              <span><strong>ReBOS 2,000-Point Audit:</strong> Mandatory photo-verified QA checklists before any stage is signed off.</span>
+            </li>
+            <li class="comparison-item">
+              <span class="icon-good">✓</span>
+              <span><strong>Milestone Payment Controls:</strong> Money releases only when work passes technical site verification.</span>
+            </li>
+            <li class="comparison-item">
+              <span class="icon-good">✓</span>
+              <span><strong>100% Impartial Guidance:</strong> IIT/IIM experts auditing every phase with zero conflict of interest.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION: RECONPRO 4-STEP PROCESS
+       ========================================================================== -->
+  <section class="section-padding section-bg-lavender" id="process">
+    <div class="container">
+      <div class="section-header-center">
+        <div class="eyebrow-badge">OUR METHODOLOGY</div>
+        <h2 class="section-title">ReconPro’s 4-Step Process to Home Construction</h2>
+        <p class="section-subtitle">
+          A structured, logical advisory flow ensuring complete clarity from choosing the right build path to final handover.
+        </p>
+      </div>
+
+      <div class="journey-stepper-grid">
+        <div class="step-card">
+          <div class="step-number">01</div>
+          <h3 class="step-title">Approach Selection</h3>
+          <p class="step-desc">
+            We evaluate your plot, budget, and goals to recommend the right path: Turnkey Builder, Collaborator, Architect + Contractor, or DIY.
+          </p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">02</div>
+          <h3 class="step-title">Agency Evaluation</h3>
+          <p class="step-desc">
+            Deep-dive audit of agency fitment across project management tools, material specs, financial legal due diligence, and delivered project surveys.
+          </p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">03</div>
+          <h3 class="step-title">Agreement & Specs</h3>
+          <p class="step-desc">
+            Drafting PM guidelines, redrafting one-sided contract terms, tweaking building specs to safety codes, and contract negotiation.
+          </p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">04</div>
+          <h3 class="step-title">Project Management</h3>
+          <p class="step-desc">
+            Regular site audits, workmanship critiques, and ReBOS mobile app tracking until final project handover.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION: ReBOS TECH SHOWCASE
+       ========================================================================== -->
+  <section class="section-padding section-bg-white" id="rebos">
+    <div class="container">
+      <div class="section-header-center">
+        <div class="eyebrow-badge">PROPRIETARY SAAS TECH</div>
+        <h2 class="section-title">ReBOS — Builder Operating System</h2>
+        <p class="section-subtitle">
+          The software application where the client, builder, site supervisor, and admin run the same build on a single live timeline.
+        </p>
+      </div>
+
+      <div class="rebos-showcase-box">
+        <div class="rebos-tabs">
+          <button class="rebos-tab-btn active" onclick="switchRebosTab('client')">Client Dashboard</button>
+          <button class="rebos-tab-btn" onclick="switchRebosTab('supervisor')">Site Supervisor App</button>
+          <button class="rebos-tab-btn" onclick="switchRebosTab('builder')">Builder Portal</button>
+          <button class="rebos-tab-btn" onclick="switchRebosTab('admin')">Admin Control</button>
+        </div>
+
+        <div class="rebos-content-grid">
+          <div>
+            <h3 class="font-heading" style="font-size:24px; margin-bottom:12px;" id="rebosRoleTitle">Client Dashboard — Watch Your Home Get Built</h3>
+            <p style="color:var(--color-on-surface-variant); line-height:1.6; margin-bottom:24px;" id="rebosRoleDesc">
+              Track overall progress, stage-wise photo evidence, verified payment milestones, and procurement triggers from your mobile or desktop 24x7.
+            </p>
+
+            <div class="checklist-stages-block">
+              <div class="stage-pill-box">
+                <h4>Stage 1: BEFORE (Prerequisites)</h4>
+                <p>Locks work until materials, structural drawings, and site clearances are verified.</p>
+              </div>
+              <div class="stage-pill-box">
+                <h4>Stage 2: DURING (Execution & Photo Logs)</h4>
+                <p>Site supervisor uploads mandatory photos and remarks directly from the slab.</p>
+              </div>
+              <div class="stage-pill-box">
+                <h4>Stage 3: AFTER (Quality Sign-Off)</h4>
+                <p>Final QA validation before payment milestone unlocks automatically.</p>
+              </div>
+            </div>
+          </div>
+
+          <div style="background-color:var(--color-lavender-tint); border:1px solid var(--color-orchid-mid-20); padding:32px; text-align:center;">
+            <div style="font-size:48px; margin-bottom:16px;">📱</div>
+            <h4 style="font-size:20px; font-weight:700; margin-bottom:8px;">Live Project Timeline</h4>
+            <p style="font-size:13px; color:var(--color-on-surface-variant); margin-bottom:20px;">
+              Real-time variance tracking: Planned vs Actual dates on every activity.
+            </p>
+            <a href="https://wa.me/919971007906?text=Hi%2C%20I%20would%20like%20a%20demo%20of%20ReBOS" target="_blank" class="btn-primary-violet" style="display:inline-block;">
+              Request ReBOS Demo
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION: INTERACTIVE TOOLS & BYE-LAWS HUB
+       ========================================================================== -->
+  <section class="section-padding section-bg-lavender" id="tools">
+    <div class="container">
+      <div class="section-header-center">
+        <div class="eyebrow-badge">INTERACTIVE COMPLIANCE TOOLS</div>
+        <h2 class="section-title">Validate Regulations & Costs Before You Build</h2>
+        <p class="section-subtitle">
+          Built-in calculators and geospatial restriction checkers tailored specifically for Delhi NCR municipal bye-laws.
+        </p>
+      </div>
+
+      <div class="tools-grid">
+        <div class="tool-card">
+          <div>
+            <div class="tool-icon">📐</div>
+            <h3>FAR & Construction Cost Calculator</h3>
+            <p>Compute permissible FAR, floor-wise built-up area, balcony, stilt, and cost estimates across Delhi, Gurugram, and Noida.</p>
+          </div>
+          <a href="#calculator" class="btn-secondary-outline" style="text-align:center;" onclick="openCalcModal()">
+            Calculate Now
+          </a>
+        </div>
+
+        <div class="tool-card">
+          <div>
+            <div class="tool-icon">🗺️</div>
+            <h3>ASI & Metro Restriction Map Tool</h3>
+            <p>Check Archaeological Survey of India (ASI) heritage monuments and DMRC metro line buffer zone construction restrictions.</p>
+          </div>
+          <a href="#geospatial" class="btn-secondary-outline" style="text-align:center;" onclick="alert('Launching Geospatial Map Checker...')">
+            Check Restrictions
+          </a>
+        </div>
+
+        <div class="tool-card">
+          <div>
+            <div class="tool-icon">📜</div>
+            <h3>City Building Bye-Laws Hub</h3>
+            <p>Access official MCD Delhi, Haryana, and Noida setback rules, height limits, ground coverage slabs, and basement norms.</p>
+          </div>
+          <a href="#byelaws" class="btn-secondary-outline" style="text-align:center;" onclick="alert('Opening Bye-Laws Library...')">
+            Browse Bye-Laws
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION: CONSTRUCTION PACKAGES COMPARISON
+       ========================================================================== -->
+  <section class="section-padding section-bg-white" id="packages">
+    <div class="container">
+      <div class="section-header-center">
+        <div class="eyebrow-badge">SPECIFICATION BENCHMARKS</div>
+        <h2 class="section-title">Construction Package Tiers Breakdown</h2>
+        <p class="section-subtitle">
+          Benchmark finishes, fittings, and material inclusions across Economy, Budget, Deluxe, and Premium options.
+        </p>
+      </div>
+
+      <div class="packages-grid">
+        <div class="package-card">
+          <div class="package-name">Economy</div>
+          <div class="package-desc">For limited budgets & future interior finishes. Basic tile flooring, site-made wooden doors, basic modular switches.</div>
+          <a href="#consultation" class="btn-secondary-outline" style="text-align:center; margin-top:auto;">View Specs</a>
+        </div>
+
+        <div class="package-card">
+          <div class="package-name">Budget</div>
+          <div class="package-desc">For clients looking for functional, durable interiors. Standard vitrified tiles, UPVC windows, branded sanitary fittings.</div>
+          <a href="#consultation" class="btn-secondary-outline" style="text-align:center; margin-top:auto;">View Specs</a>
+        </div>
+
+        <div class="package-card highlight">
+          <div class="package-name" style="color:var(--color-primary);">Deluxe ⭐</div>
+          <div class="package-desc">Comfortable interiors & enhanced functionality. Italian marble option, premium sanitary ware, earthquake-resistant RCC.</div>
+          <a href="#consultation" class="btn-primary-violet" style="text-align:center; margin-top:auto;">View Specs</a>
+        </div>
+
+        <div class="package-card">
+          <div class="package-name">Premium</div>
+          <div class="package-desc">Luxury interiors, high utility & smart features. Imported stone, concealed VRV AC piping, custom facade paneling.</div>
+          <a href="#consultation" class="btn-secondary-outline" style="text-align:center; margin-top:auto;">View Specs</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION: LEADERSHIP & INSTITUTIONAL AUTHORITY
+       ========================================================================== -->
+  <section class="section-padding section-bg-lavender" id="about">
+    <div class="container">
+      <div class="section-header-center">
+        <div class="eyebrow-badge">INSTITUTIONAL CREDENTIALS</div>
+        <h2 class="section-title">Guided by IIT, IIM & Architectural Experts</h2>
+        <p class="section-subtitle">
+          Our strength lies in independent thinking, structured evaluation, and decades of senior real estate experience.
+        </p>
+      </div>
+
+      <div class="leadership-grid">
+        <div class="leader-card">
+          <div class="leader-name">Abhinav Mukherjee</div>
+          <div class="leader-role">Founder & CEO — IIM Calcutta</div>
+          <div class="leader-bio">B.E. (E&T) NMU. 15+ years in strategy consulting, real estate operations, product design, pricing, and manufacturing leadership.</div>
+        </div>
+
+        <div class="leader-card">
+          <div class="leader-name">Deepak Jha</div>
+          <div class="leader-role">Co-Founder & COO — Symbiosis</div>
+          <div class="leader-bio">15+ years in business growth, facility management, CRM, and project planning across real estate and utility services.</div>
+        </div>
+
+        <div class="leader-card">
+          <div class="leader-name">Santosh Jha</div>
+          <div class="leader-role">Advisor — IIT Kharagpur & FMS</div>
+          <div class="leader-bio">B.Arch IIT KGP, FMS Delhi. 20+ years in asset management, investment due diligence, land acquisition, and project execution.</div>
+        </div>
+
+        <div class="leader-card">
+          <div class="leader-name">Neeraj Prasad</div>
+          <div class="leader-role">Principal Architect — IIT Roorkee</div>
+          <div class="leader-bio">31 years of experience in architectural design, master planning, structural compliance, and project management oversight.</div>
+        </div>
+
+        <div class="leader-card">
+          <div class="leader-name">Kanwal Jeet Sikka</div>
+          <div class="leader-role">Director Projects</div>
+          <div class="leader-bio">22+ years of senior executive experience in real estate strategic management, land acquisition, and stressed asset management.</div>
+        </div>
+
+        <div class="leader-card" style="background-color:var(--color-primary); color:#FFF;">
+          <div class="leader-name" style="color:#FFF;">100,000+ Sq. Ft.</div>
+          <div class="leader-role" style="color:var(--color-orchid-mid);">Assets Under Management</div>
+          <div class="leader-bio" style="color:rgba(255,255,255,0.9);">Verified portfolio including luxury plots in Emerald Hills (400 sq yds) and Malibu Towne Gurugram (541 sq yds).</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FOOTER & FLOATING ACTION
+       ========================================================================== -->
+  <footer class="site-footer" id="contact">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="brand-container" style="color:#FFF;">
+            <div class="logo-hexagon">⬡</div>
+            <div class="brand-text-block">
+              <span class="wordmark" style="color:#FFF;">RECONPRO</span>
+              <span class="tagline" style="color:var(--color-orchid-mid);">Your Knowledge Partner in Home Construction</span>
+            </div>
+          </div>
+          <p>
+            Independent techno-commercial advisory enabling confident real estate decision making for plot owners, buyers, and investors.
+          </p>
+        </div>
+
+        <div class="footer-column">
+          <h4>Advisory</h4>
+          <ul class="footer-links">
+            <li><a href="#process">4-Step Process</a></li>
+            <li><a href="#services-list">Specialized Services</a></li>
+            <li><a href="#packages">Package Specifications</a></li>
+            <li><a href="#portfolio">AUM Portfolio</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Tools & Tech</h4>
+          <ul class="footer-links">
+            <li><a href="#rebos">ReBOS Construction App</a></li>
+            <li><a href="https://app.reconpro.io" target="_blank">ReBOS Portal Sign-In</a></li>
+            <li><a href="#calculator">FAR & Cost Calculator</a></li>
+            <li><a href="#geospatial">ASI & Metro Checker</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Contact & Location</h4>
+          <p style="font-size:13px; color:rgba(243,234,251,0.8); line-height:1.6; margin-bottom:12px;">
+            📍 Spaze i-Tech Park, Tower B4, Unit 312, Sector 49, Sohna Road, Gurugram, Haryana - 122018
+          </p>
+          <p style="font-size:13px; color:rgba(243,234,251,0.8);">
+            📞 +91 9971007906<br>
+            ✉️ info@reconpro.io
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 RECONPRO. All Rights Reserved. Impartial Advisory Services.</div>
+        <div>
+          <a href="#privacy" style="color:rgba(243,234,251,0.6); text-decoration:none; margin-right:16px;">Privacy Policy</a>
+          <a href="#terms" style="color:rgba(243,234,251,0.6); text-decoration:none;">Terms & Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp CTA -->
+  <a href="https://wa.me/919971007906?text=Hi%2C%20I%20have%20a%20query%20regarding%20home%20construction%20advisory" target="_blank" class="floating-whatsapp-btn">
+    💬 Chat on WhatsApp
+  </a>
+
+  <script src="/main.js"></script>
+</body>
+</html>
