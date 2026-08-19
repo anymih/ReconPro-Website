@@ -54,6 +54,7 @@
         <a href="#about" class="nav-link">Expertise</a>
       </nav>
       <div class="header-actions">
+        <a href="#heroLeadForm" class="btn-register header-register">Register</a>
         <a href="#heroLeadForm" class="btn-primary header-cta">Get Advisory Summary</a>
         <button class="mobile-menu-toggle" onclick="toggleMobileMenu(true)" aria-label="Open Navigation Menu">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
@@ -64,33 +65,45 @@
 
   <!-- ========== SECTION 1: HERO ========== -->
   <section class="hero-section" id="hero">
+    <!-- Hero Background Carousel -->
+    <div class="hero-carousel" id="heroCarousel" aria-label="Hero background slideshow">
+      <div class="hero-slide active" style="background-image: url('/assets/hero/hero_banner_1.jpg')"></div>
+      <div class="hero-slide" style="background-image: url('/assets/hero/hero_banner_2.jpg')"></div>
+      <div class="hero-slide" style="background-image: url('/assets/hero/hero_banner_3.jpg')"></div>
+      <div class="hero-carousel-overlay"></div>
+      <!-- Carousel Indicators -->
+      <div class="hero-carousel-dots">
+        <button class="carousel-dot active" data-slide="0" aria-label="Slide 1"></button>
+        <button class="carousel-dot" data-slide="1" aria-label="Slide 2"></button>
+        <button class="carousel-dot" data-slide="2" aria-label="Slide 3"></button>
+      </div>
+    </div>
+
     <div class="container hero-grid">
 
       <div class="hero-left">
         <span class="eyebrow">INDEPENDENT TECHNO-COMMERCIAL ADVISORY</span>
 
-        <h1 class="hero-title">Planning to Build a Home? <span class="hero-accent">Protect Your Money, Quality and Timeline</span> even before you appoint a builder.</h1>
+        <h1 class="hero-title">Your Builder Won't Tell You This. <span class="hero-accent">We Will.</span></h1>
 
-        <p class="hero-subtitle">ReconPro is an independent techno-commercial advisory led by IIT & IIM experts. We don't sell property or build homes. We analyse your builder's quotes, contracts and site conditions to deliver transparent cost, quality and risk oversight.</p>
+        <p class="hero-subtitle">Builders quote low, then add costs later. ReconPro audits the contract, the specs and the site before you sign, so nothing gets added after.</p>
 
         <p class="hero-support">In a market clouded by misinformation, biased referrals and hidden costs, you need a knowledge partner who sits only on your side of the table.</p>
 
         <ul class="hero-bullets">
           <li>
             <svg class="hero-bullet-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-            Independent, client-side advisory: zero contractor or broker commissions.
+            We're not builders. We're not brokers. We don't get paid if you overpay.
           </li>
           <li>
             <svg class="hero-bullet-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-            Structured guidance on approach, agency selection, agreements and project management.
+            One structured process from choosing your approach to handing you the keys.
           </li>
           <li>
             <svg class="hero-bullet-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-            Tech-enabled process, site visits and work audits until handover.
+            Site visits and audits you can actually check, not just take our word for.
           </li>
         </ul>
-
-        <img src="/assets/placeholders/hero_family_home.jpg" alt="Family in front of their new custom-built home" class="hero-image" loading="lazy">
       </div>
 
       <div class="hero-right">
@@ -143,19 +156,19 @@
       <div class="metrics-grid">
         <div class="metric-card">
           <div class="metric-number">&#8377;4.5+ <span>Cr</span></div>
-          <div class="metric-desc">Construction decisions guided successfully.</div>
+          <div class="metric-desc">Construction decisions guided.</div>
         </div>
         <div class="metric-card">
           <div class="metric-number">1,75,000+ <span>sq ft</span></div>
-          <div class="metric-desc">Projects evaluated for cost, specifications, contracts and execution.</div>
+          <div class="metric-desc">Projects evaluated for cost, specs and execution.</div>
         </div>
         <div class="metric-card">
           <div class="metric-number">2,000+</div>
-          <div class="metric-desc">Multi-disciplinary team spanning real estate, architecture, construction and law.</div>
+          <div class="metric-desc">Multi-disciplinary team across real estate, architecture and law.</div>
         </div>
         <div class="metric-card">
-          <div class="metric-number">15+ <span>Years</span></div>
-          <div class="metric-desc">Combined experience in techno-commercial due diligence and project audits.</div>
+          <div class="metric-number">25+ <span>Cities</span></div>
+          <div class="metric-desc">Pan-India presence, expanding every quarter.</div>
         </div>
       </div>
     </div>
@@ -165,7 +178,7 @@
   <section class="comparison-section" id="why-reconpro">
     <div class="container">
       <div class="section-header">
-        <h2>Typical Home Construction Traps vs. The ReconPro Shield</h2>
+        <h2>Typical Construction Traps vs. The ReconPro Shield</h2>
         <p>Independent advisory protection against common industry pitfalls.</p>
       </div>
       <div class="comparison-grid">
@@ -197,35 +210,15 @@
     </div>
   </section>
 
-  <!-- ========== SECTION 4: ADVISORY SERVICE MODES ========== -->
-  <section class="services-section" id="services">
+  <!-- ========== SECTION 4: HOW WE HELP ========== -->
+  <section class="how-we-help-section" id="how-we-help">
     <div class="container">
       <div class="section-header">
-        <h2>Advisory Service Modes</h2>
-        <p>Structured engagement pathways across your build journey.</p>
+        <h2>We're not property agents. We're not builders. We're the second opinion you check both against.</h2>
       </div>
-      <div class="services-grid">
-        <div class="service-card">
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 17H5a2 2 0 00-2 2m14-2h4a2 2 0 012 2M12 12a5 5 0 100-10 5 5 0 000 10zm0 0v5m-3 0h6"/><rect x="2" y="3" width="20" height="14" rx="2"/></svg>
-          </div>
-          <h3>Pre-Build Advisory</h3>
-          <p>For plot owners deciding whether to build, sell, collaborate or wait. We model scenarios, risks and returns so you choose the right path.</p>
-        </div>
-        <div class="service-card">
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
-          </div>
-          <h3>Agency Evaluation & Contracts</h3>
-          <p>Evaluate builders on documented criteria and reshape agreements to lock in accountability and transparency before you sign.</p>
-        </div>
-        <div class="service-card">
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg>
-          </div>
-          <h3>Project Oversight & Audits</h3>
-          <p>Site visits, quality audits, and contract-to-execution checks to catch issues early and keep the project aligned with your expectations.</p>
-        </div>
+      <div class="how-we-help-content">
+        <p class="how-we-help-text">As an impartial knowledge partner, we guide plot owners and contractors through the choices that actually decide the outcome: whether to sell, collaborate, self-build, or invest. Our techno-commercial lens covers legal and financial due diligence, valuation, developer capability, design and execution assessment, reviewed together, not in silos.</p>
+        <p class="how-we-help-text">Our team includes IIT and IIM alumni and working experts in real estate, architecture, construction and law. You don't need any of that background yourself. That's what you're hiring.</p>
       </div>
     </div>
   </section>
@@ -241,28 +234,70 @@
         <div class="process-step">
           <div class="step-number">01</div>
           <h3>Approach Selection</h3>
-          <p>Evaluate plot, family requirements and budget to select the optimal method: Turnkey, Collaborator, Architect-led, Contractor-led, or Owner-managed.</p>
+          <p>Evaluate plot, requirements and budget to select the optimal method: Turnkey, Collaborator, Architect-led or Owner-managed.</p>
         </div>
         <div class="process-step">
           <div class="step-number">02</div>
           <h3>Agency Evaluation</h3>
-          <p>Detailed technical, financial, and track-record due diligence of prospective contractors on documented evidence.</p>
+          <p>Technical, financial and track-record due diligence of prospective contractors on documented evidence.</p>
         </div>
         <div class="process-step">
           <div class="step-number">03</div>
           <h3>Agreements & Specs</h3>
-          <p>Redraft one-sided contract clauses, standardize specifications, and negotiate locked pricing terms.</p>
+          <p>Redraft one-sided clauses, standardize specifications and negotiate locked pricing terms.</p>
         </div>
         <div class="process-step">
           <div class="step-number">04</div>
           <h3>Project Management</h3>
-          <p>Routine site audits, stage milestone verification, and ReBOS-tracked execution through final handover.</p>
+          <p>Routine site audits, milestone verification and ReBOS-tracked execution through handover.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ========== SECTION 6: REBOS PLATFORM BAND ========== -->
+  <!-- ========== SECTION 6: ENGAGEMENT MODES ========== -->
+  <section class="services-section" id="services">
+    <div class="container">
+      <div class="section-header">
+        <h2>Engagement Modes</h2>
+        <p>Pick the depth of support your build actually needs right now.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-card-top">
+            <span class="service-label">7-14 DAYS</span>
+            <div class="service-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+            </div>
+          </div>
+          <h3>Decision Sprint</h3>
+          <p>Quick clarity when choosing a path or a partner. Shortlist review plus a written recommendation memo.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-card-top">
+            <span class="service-label">MONTHLY OR QUARTERLY</span>
+            <div class="service-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg>
+            </div>
+          </div>
+          <h3>Milestone Reviews</h3>
+          <p>Site audits, compliance checks and progress reports for when you've started and want a second set of eyes.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-card-top">
+            <span class="service-label">START TO HANDOVER</span>
+            <div class="service-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+            </div>
+          </div>
+          <h3>Full Lifecycle</h3>
+          <p>Contract, spec and cost oversight, risk management, all the way through delivery.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SECTION 7: REBOS PLATFORM BAND ========== -->
   <section class="rebos-section" id="rebos">
     <div class="container rebos-grid">
       <div class="rebos-content">
@@ -326,7 +361,7 @@
     </div>
   </section>
 
-  <!-- ========== SECTION 7: REGULATORY TOOLS ========== -->
+  <!-- ========== SECTION 8: REGULATORY TOOLS ========== -->
   <section class="tools-section" id="tools">
     <div class="container">
       <div class="section-header">
@@ -362,55 +397,35 @@
     </div>
   </section>
 
-  <!-- ========== SECTION 8: PACKAGE BENCHMARKS ========== -->
-  <section class="packages-section" id="packages">
+  <!-- ========== SECTION 9: SERVICES AT A GLANCE ========== -->
+  <section class="services-glance-section" id="services-glance">
     <div class="container">
       <div class="section-header">
-        <h2>Construction Package Tiers Benchmark</h2>
-        <p>ReconPro audits and benchmarks builder packages; it does not sell construction packages.</p>
+        <h2>Eleven ways we protect a decision. Explore the one you need right now.</h2>
       </div>
-      <div class="packages-grid">
-        <div class="package-card">
-          <div class="package-tier">Economy</div>
-          <ul>
-            <li>Basic vitrified tile flooring</li>
-            <li>Site-made wooden joinery</li>
-            <li>Standard modular electricals</li>
-          </ul>
-          <button class="btn-secondary" onclick="openSpecsModal('Economy')">View Specs</button>
+      <div class="services-glance-content">
+        <div class="services-chips-grid">
+          <span class="service-chip">Plot Survey</span>
+          <span class="service-chip">Agency Evaluation</span>
+          <span class="service-chip">Due Diligence</span>
+          <span class="service-chip">Specification Drafting</span>
+          <span class="service-chip">Agreement Review</span>
+          <span class="service-chip">Taxation Review</span>
+          <span class="service-chip">Constructibility Review</span>
+          <span class="service-chip">Design Review</span>
+          <span class="service-chip">Feasibility Assessments</span>
+          <span class="service-chip">Preconstruction Service</span>
+          <span class="service-chip">Project Management</span>
         </div>
-        <div class="package-card">
-          <div class="package-tier">Budget</div>
-          <ul>
-            <li>Branded vitrified tiles</li>
-            <li>UPVC windows & doors</li>
-            <li>Branded CP & sanitary fittings</li>
-          </ul>
-          <button class="btn-secondary" onclick="openSpecsModal('Budget')">View Specs</button>
-        </div>
-        <div class="package-card package-highlight">
-          <div class="package-tier">Deluxe</div>
-          <ul>
-            <li>Imported marble flooring option</li>
-            <li>Premium sanitary & CP fittings</li>
-            <li>Enhanced 3-layer waterproofing</li>
-          </ul>
-          <button class="btn-primary" onclick="openSpecsModal('Deluxe')">View Specs</button>
-        </div>
-        <div class="package-card">
-          <div class="package-tier">Premium</div>
-          <ul>
-            <li>High-end Italian marble</li>
-            <li>VRV AC copper piping</li>
-            <li>Custom facade paneling</li>
-          </ul>
-          <button class="btn-secondary" onclick="openSpecsModal('Premium')">View Specs</button>
+        <p class="services-glance-support">Each one covers exactly what it sounds like, no jargon required.</p>
+        <div class="services-glance-action">
+          <a href="/services" class="btn-primary">See All Services</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ========== SECTION 9: CASE STUDIES ========== -->
+  <!-- ========== SECTION 10: CASE STUDIES ========== -->
   <section class="portfolio-section" id="portfolio">
     <div class="container">
       <div class="section-header">
@@ -446,7 +461,7 @@
     </div>
   </section>
 
-  <!-- ========== SECTION 10: LEADERSHIP ========== -->
+  <!-- ========== SECTION 11: LEADERSHIP ========== -->
   <section class="leadership-section" id="about">
     <div class="container">
       <div class="section-header">
@@ -457,12 +472,12 @@
         <div class="leader-card">
           <div class="leader-name">Abhinav Mukherjee</div>
           <div class="leader-role">Founder & CEO, IIM Calcutta</div>
-          <p>15+ years in strategy consulting, real estate operations, product design, pricing, and manufacturing leadership.</p>
+          <p>15+ years in strategy consulting, real estate operations, product design and pricing leadership.</p>
         </div>
         <div class="leader-card">
           <div class="leader-name">Deepak Jha</div>
           <div class="leader-role">Co-Founder & COO, Symbiosis</div>
-          <p>15+ years in business growth, facility management, CRM, and project planning across real estate and utility services.</p>
+          <p>15+ years in business growth, facility management and project planning across real estate.</p>
         </div>
         <div class="leader-card">
           <div class="leader-name">Santosh Jha</div>
@@ -472,7 +487,7 @@
         <div class="leader-card">
           <div class="leader-name">Neeraj Prasad</div>
           <div class="leader-role">Principal Architect, IIT Roorkee</div>
-          <p>31 years of experience in architectural design, master planning, structural compliance, and project oversight.</p>
+          <p>31 years in architectural design, master planning, structural compliance and project oversight.</p>
         </div>
         <div class="leader-card">
           <div class="leader-name">Kanwal Jeet Sikka</div>
@@ -483,12 +498,44 @@
     </div>
   </section>
 
-  <!-- ========== SECTION 11: FAQ ========== -->
+  <!-- ========== SECTION 12: TESTIMONIALS ========== -->
+  <section class="testimonials-section" id="testimonials">
+    <div class="container">
+      <div class="section-header">
+        <h2>What plot owners say after they stopped guessing.</h2>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card testimonial-placeholder">
+          <div class="testimonial-status-tag">Pending Content</div>
+          <blockquote class="testimonial-quote">"[Real quote 1]"</blockquote>
+          <div class="testimonial-author">
+            <span class="author-name">[Name]</span>, <span class="author-location">[Project/City]</span>
+          </div>
+        </div>
+        <div class="testimonial-card testimonial-placeholder">
+          <div class="testimonial-status-tag">Pending Content</div>
+          <blockquote class="testimonial-quote">"[Real quote 2]"</blockquote>
+          <div class="testimonial-author">
+            <span class="author-name">[Name]</span>, <span class="author-location">[Project/City]</span>
+          </div>
+        </div>
+        <div class="testimonial-card testimonial-placeholder">
+          <div class="testimonial-status-tag">Pending Content</div>
+          <blockquote class="testimonial-quote">"[Real quote 3]"</blockquote>
+          <div class="testimonial-author">
+            <span class="author-name">[Name]</span>, <span class="author-location">[Project/City]</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SECTION 13: FAQ ========== -->
   <section class="faq-section" id="faq">
     <div class="container">
       <div class="section-header">
         <h2>Frequently Asked Questions</h2>
-        <p>Common questions regarding independent advisory, engagement stages, and fees.</p>
+        <p>Common questions about independent advisory, engagement stages and fees.</p>
       </div>
       <div class="faq-list">
         <div class="faq-item">
@@ -544,12 +591,12 @@
   <section class="cta-band" id="cta-bottom">
     <div class="container cta-band-inner">
       <h2>Ready to treat your plot like a serious investment, not a leap of faith?</h2>
-      <p>Share a few basic details and get a structured advisory summary: your best approach, key risks to watch, and the questions you should ask every builder before you sign.</p>
+      <p>Share a few details and get a structured advisory summary: your best approach, key risks and the questions to ask every builder before you sign.</p>
       <a href="#heroLeadForm" class="btn-primary btn-cta-bottom">Get Advisory Summary</a>
     </div>
   </section>
 
-  <!-- ========== SECTION 12: FOOTER ========== -->
+  <!-- ========== FOOTER ========== -->
   <footer class="site-footer" id="contact">
     <div class="container">
       <div class="footer-grid">
@@ -568,7 +615,7 @@
           <ul>
             <li><a href="#services">Practice</a></li>
             <li><a href="#process">4-Step Process</a></li>
-            <li><a href="#packages">Package Specs</a></li>
+            <li><a href="#services-glance">Services Overview</a></li>
             <li><a href="#portfolio">Portfolio</a></li>
           </ul>
         </div>

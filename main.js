@@ -32,6 +32,56 @@ if (header) {
   }, { passive: true });
 }
 
+// ========== HERO CAROUSEL AUTO-SCROLL ==========
+(function initHeroCarousel() {
+  const slides = document.querySelectorAll('.hero-slide');
+  const dots = document.querySelectorAll('.carousel-dot');
+  if (!slides.length) return;
+
+  let currentSlide = 0;
+  let carouselInterval;
+  const SLIDE_DURATION = 5000;
+
+  function goToSlide(index) {
+    slides[currentSlide].classList.remove('active');
+    dots[currentSlide].classList.remove('active');
+    currentSlide = index % slides.length;
+    slides[currentSlide].classList.add('active');
+    dots[currentSlide].classList.add('active');
+  }
+
+  function nextSlide() {
+    goToSlide(currentSlide + 1);
+  }
+
+  function startAutoPlay() {
+    carouselInterval = setInterval(nextSlide, SLIDE_DURATION);
+  }
+
+  function resetAutoPlay() {
+    clearInterval(carouselInterval);
+    startAutoPlay();
+  }
+
+  // Dot click handlers
+  dots.forEach(dot => {
+    dot.addEventListener('click', () => {
+      const slideIndex = parseInt(dot.dataset.slide, 10);
+      goToSlide(slideIndex);
+      resetAutoPlay();
+    });
+  });
+
+  // Pause on hover
+  const heroSection = document.getElementById('hero');
+  if (heroSection) {
+    heroSection.addEventListener('mouseenter', () => clearInterval(carouselInterval));
+    heroSection.addEventListener('mouseleave', startAutoPlay);
+  }
+
+  startAutoPlay();
+})();
+
 // ========== SMOOTH ANCHOR SCROLLING ==========
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', (e) => {
@@ -629,7 +679,7 @@ const animateOnScroll = () => {
   }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 
   const targets = document.querySelectorAll(
-    '.metric-card, .comparison-card, .service-card, .process-step, .tool-card, .package-card, .portfolio-card, .leader-card, .faq-item'
+    '.metric-card, .comparison-card, .how-we-help-content, .service-card, .process-step, .tool-card, .services-glance-content, .portfolio-card, .leader-card, .testimonial-card, .faq-item'
   );
   targets.forEach(t => {
     t.style.opacity = '0';
